@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Image/Background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+    
+}
+.nav-links-a{
+    flex: 1;
+    text-align: left;
+}
+.nav-links-a aa ab{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: absolute;
+    top: 52px;
+}
+.nav-links-a aa ab a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Impact;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+.nav-links ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(243, 151, 13);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.8s;
+}
+.nav-links ul li:hover:after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+    font-family: Arial;
+    font-weight: lighter;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    font-family: 'Gill Sans';
+}
+.fb-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.fb-btn:hover{
+    border: 1px solid  rgb(243, 151, 13);
+    background:  rgb(243, 151, 13);
+    transition: 0.8s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 1000px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(243, 151, 13);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color: rgb(0, 0, 0);
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
